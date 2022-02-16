@@ -146,3 +146,131 @@ function onlyVowels(str) {
 onlyVowels('Colin Jaffe');
 onlyVowels('quickly');
 onlyVowels('Anthony DeRosa');
+
+
+function crazyCase(str) {
+
+    let strA = "";
+    
+        for (let count = 0; count < str.length; count++) {
+    
+            if (count % 2 === 0) {
+    
+                strA = strA + str[count].toUpperCase();          
+    
+            } else {
+    
+                strA = strA + str[count].toLowerCase();
+    
+            }
+    
+        }
+    
+        return console.log(strA);
+    
+}
+    
+crazyCase('hello');
+crazyCase('multiple words here');
+crazyCase('YELLING');
+
+
+function titleCase(str) {
+
+    let strA = "";
+
+    for (let count = 0; count < str.length; count++) {
+
+        if (count === 0) {
+
+            strA = strA + str[count].toUpperCase();
+            
+
+        } else if (str[count] === " ") {
+
+            strA = strA + str[count]
+            strA = strA + str[count += 1].toUpperCase();
+
+        } else {
+
+            strA = strA + str[count].toLowerCase();
+
+        }
+
+    }
+
+    return console.log(strA);
+
+}
+
+titleCase('return of the king');
+titleCase('cOde iMMerSives');
+
+
+function camelCase(str) {
+
+    let strA = "";
+
+    for (let count = 0; count < str.length; count++) {
+
+        if (count === 0) {
+
+            strA = strA + str[count].toLowerCase();
+            
+        } else if (str[count] === " ") {
+
+            // strA = strA + str[count]
+            strA = strA + str[count += 1].toUpperCase();
+
+        } else {
+
+            strA = strA + str[count].toLowerCase();
+
+        }
+
+    }
+
+    return console.log(strA);
+
+}
+
+camelCase('oh Hello');
+camelCase('well yeah of course');
+camelCase('Boy howdy');
+
+
+function crazyCase2ReturnOfCrazyCase(str) {
+
+    let strA = "";
+    let a = 0;
+
+    for (let count = 0; count < str.length; count++) {
+
+        if (str[count] === " ") {
+
+            a = a + 1;
+
+        }
+
+        if (a % 2 === 0) {
+
+            strA = strA + str[count].toUpperCase();
+
+        } else {
+
+            strA = strA + str[count].toLowerCase();
+
+        }
+
+        a += 1;
+
+    }
+
+    return console.log(strA);
+
+}
+
+
+
+crazyCase2ReturnOfCrazyCase('multiple words here');
+crazyCase2ReturnOfCrazyCase('crazy stuff');
