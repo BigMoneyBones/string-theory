@@ -1,72 +1,117 @@
-// console.log(xify("hello"));
-
-// function xify(str) {
-//     let strX = "";
-//     str.length
-//     for (let count = 0; count < str.length; count++){
-//         strX += 'x';
-//     }
-//     return strX;
-// }
-
-
-        // function yellingChars(str) {
-        //     let strY = "";
-        //     for (let count = 0; count < str.length; count++) {
-        //         strY = strY + str[count] + "!";
-
-        //     }
-        //     console.log(strY);
-        // }
-
-        // let str1 = 'goodness';
-        // yellingChars(str1);
+function xify(str) {
+        let strA = "";
+        for (let count = 0; count < str.length; count++){
+            strA += 'x';
+        }
+        return console.log(strA);
+}
+    
+xify('hello');
+xify('hi there');
 
 
-// function indexedChars(str) {
-//     let strA = "";
-//     for (count = 0; count < str.length; count++) {
-//         strA = strA + count + str[count];
-//     }
-//     console.log(strA);
-// }    
-// let str1 = 'hello';
-// indexedChars(str1);
+function yellingChars(str) {
+        let strA = "";
+        for (let count = 0; count < str.length; count++) {
+            strA = strA + str[count] + "!";
+        }
+        return console.log(strA);
+}
+    
+yellingChars('goodness');
+yellingChars('oh hello');
 
 
-//***OR*** 
-
-// function indexedChars(str) {
-//     let strA = "";
-//     let index = 0;
-//     for (let i of str) {
-//         strA += index;
-//         strA += i;
-//         index = index +1;
-//     }
-//     console.log(strA);
-// }
-
-// let strA = 'hello';
-// indexedChars(strA)
+function indexedChars(str) {
+        let strA = "";
+        for (count = 0; count < str.length; count++) {
+            strA += count + str[count];
+        }
+        return console.log(strA);
+}    
+    
+indexedChars('hello');
+indexedChars('bye');
 
 
-        // function numberedChars(str) {
-        //     let strA = '';
-        //     let index = 1;
-        //     for (let i of str) {
-        //         strA += "(" + index + ")";
-        //         strA += (i);
-        //         index = index + 1
-        //     }
-        //     console.log(strA);
-        // }
-
-        // let str1 = 'hello'
-        // numberedChars(str1);
+function numberedChars(str) {
+        let strA = '';
+    
+        for (count = 0; count < str.length; count++) {
+            strA += "(" + (count + 1) + ")";
+            strA += str[count];
+        }    
+    
+        return console.log(strA);
+    
+}
+    
+numberedChars('hello');
+numberedChars('bye');
 
 
 function exclaim(str) {
-    let strA = '';
-
+        let strA = "";
+    
+        for (let count = 0; count < str.length; count++){
+           
+            if(str[count] === "." || str[count] === "?") {
+                strA = strA + "!";
+            } else {
+                strA = strA + str[count];
+            }
+        }
+    
+        return console.log(strA);
+    
 }
+    
+exclaim('What are you doing? Are you a fool?');
+exclaim('This is fine.')
+
+
+function repeatIt(str,num) {
+        let strA = "";
+        for(let count = 0; count < num; count++) {
+            //strA = strA + str; 
+            strA += str;
+        }
+        return console.log(strA);
+}
+    
+repeatIt('beetlejuice', 3);
+repeatIt('oh hi!', 8);
+
+
+function truncate(str) {
+        let strA = "";
+        for (let count = 0; count < 15; count++) {
+            
+                strA = strA + str[count];
+        }
+        return console.log(strA + "...");
+}
+    
+truncate('The fault, dear Brutus, is not in our stars, but in ourselves.');
+truncate("Well, that's just, like, your opinion man.");
+
+
+function ciEmailify(str) {
+
+        let strA = "";
+    
+        for (let count = 0; count < str.length; count++) {
+            
+            if (str[count] === " ") {
+                strA = strA + str + ".";
+            } 
+          
+        }
+        
+        return console.log(strA + "@codeimmersives.com");
+    
+}
+    
+    
+ciEmailify('colin jaffe');
+ciEmailify('Anthony DeRosa');
