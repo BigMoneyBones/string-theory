@@ -115,3 +115,34 @@ function ciEmailify(str) {
     
 ciEmailify('colin jaffe');
 ciEmailify('Anthony DeRosa');
+
+
+function reverse(str) {
+
+        let strA = "";
+   
+        for (let count = str.length-1; count >= 0; count--) {
+           strA = strA + str[count];
+        }
+        return console.log(strA);
+}
+   
+reverse('colin');
+reverse('mesuara');
+
+
+function onlyVowels(str) {
+
+        let strA = "";
+    
+        for (let count = 0; count < str.length; count++) {
+    
+            if (str[count] === "a" || str[count] === "A" ||  str[count] === "e" || str[count] === "E" || str[count] === "i" || str[count] === "I" || str[count] === "o" || str[count] === "O" || str[count] === "u" || str[count] === "U") {
+                strA = strA + str[count];
+            }
+        }
+        return console.log(strA);
+}
+onlyVowels('Colin Jaffe');
+onlyVowels('quickly');
+onlyVowels('Anthony DeRosa');
